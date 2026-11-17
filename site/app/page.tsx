@@ -1,11 +1,11 @@
 'use client';
 import { useEffect, useRef, useState } from 'react';
 import movements from '@/lib/movements.json';
-import { replay, type Game } from '@/lib/tournament';
+import { replay, SET_VERSION, type Game } from '@/lib/tournament';
 import { apiErrorMessage, parseGame, parseStats, parseCompletedGame, type Stats } from '@/lib/api-contract';
 const getMovement=(id:string)=>movements.find(m=>m.id===id)!;
 const pct=(a:number,b:number)=>b?`${(a/b*100).toFixed(1)}%`:'—';
-const storageKey='worst-workout-game-v1';
+const storageKey=`worst-workout-game-${SET_VERSION}`;
 async function api<T>(url:string,parse:(value:unknown)=>T,body?:unknown):Promise<T>{
  const response=await fetch(url,body?{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)}:undefined);
  const data:unknown=await response.json();
@@ -36,13 +36,13 @@ export default function Home(){
  const champion=state?.winner?getMovement(state.winner):null;
  const championStats=stats?.rows.find(r=>r.id===champion?.id);
  function rankings(limit?:number){return <div className="rankings"><div className="table-head"><span>순위 / 동작</span><span>우승률</span><span>대결 승률</span></div>{sorted.length?sorted.slice(0,limit).map((row,i)=><div className="rank-row" key={row.id}><span className="rank-no">{String(i+1).padStart(2,'0')}</span><div className="rank-name">{getMovement(row.id)?.name}<small>{row.champions}회 우승 · {row.appearances}게임 포함</small></div><strong>{pct(row.champions,row.appearances)}</strong><span>{pct(row.wins,row.battles)}</span></div>):<div className="empty">{stats?'아직 완료된 게임이 없어요. 첫 번째 최악을 골라주세요.':'통계를 불러오는 중입니다.'}</div>}</div>}
- return <div className="site"><header className="header"><button className="brand" onClick={home} aria-label="시작 화면"><span className="brand-icon">W.</span><span>worst workout<span className="brand-sub">Community picks · 2026</span></span></button><nav aria-label="주 메뉴"><button className={view==='candidates'?'active':''} onClick={()=>{setView('candidates');setError('');}}>동작 도감 <span>63</span></button><button className={view==='stats'?'active':''} onClick={()=>{setError('');setView('stats');void loadStats();}}>전체 랭킹 ↗</button></nav></header>
+ return <div className="site"><header className="header"><button className="brand" onClick={home} aria-label="시작 화면"><span className="brand-icon">W.</span><span>worst workout<span className="brand-sub">Community picks · 2026</span></span></button><nav aria-label="주 메뉴"><button className={view==='candidates'?'active':''} onClick={()=>{setView('candidates');setError('');}}>동작 도감 <span>{movements.length}</span></button><button className={view==='stats'?'active':''} onClick={()=>{setError('');setView('stats');void loadStats();}}>전체 랭킹 ↗</button></nav></header>
  {error&&<div role="alert" className="error">{error} <button onClick={()=>{if(view==='result'&&game)void finish(game);else void loadStats();}}>다시 시도</button></div>}
  {view==='home'&&<main className="home">
   <section className="hero-copy" aria-labelledby="hero-title">
    <p className="hero-eyebrow"><span className="dot"/> 2026 최악의 동작 월드컵 <span aria-hidden="true">→</span></p>
    <h1 id="hero-title">생각만 해도 숨찬 동작.<br/><span>최악은 당신이 정해요.</span></h1>
-   <p className="muted intro">63개의 크로스핏 동작 중, 나에게 더 힘든 동작을 골라보세요.<br/>마지막 선택이 끝나면 모두의 생각도 확인할 수 있어요.</p>
+   <p className="muted intro">{movements.length}개의 크로스핏 동작 중, 나에게 더 힘든 동작을 골라보세요.<br/>마지막 선택이 끝나면 모두의 생각도 확인할 수 있어요.</p>
    <div className="start-panel">
     <div className="round-select" role="group" aria-label="라운드 선택">{[16,32].map(n=><button key={n} aria-pressed={size===n} className={size===n?'selected':''} onClick={()=>setSize(n)}>{n}강 <small>{n-1}번의 선택</small></button>)}</div>
     <div className="hero-actions"><button className="primary" disabled={busy} onClick={()=>void start()}>{busy?'대진 준비 중…':'나의 최악 고르기'}<span aria-hidden="true">→</span></button><button className="secondary" onClick={()=>{setView('candidates');setError('');}}>동작 둘러보기 <span aria-hidden="true">↗</span></button></div>
@@ -51,7 +51,7 @@ export default function Home(){
    </div>
   </section>
   <section className="movement-preview" aria-labelledby="preview-title">
-   <div className="preview-heading"><h2 id="preview-title">익숙한 동작도, 선택은 다르게.</h2><span>63 movements. Your perspective.</span></div>
+   <div className="preview-heading"><h2 id="preview-title">익숙한 동작도, 선택은 다르게.</h2><span>{movements.length} movements. Your perspective.</span></div>
    <div className="preview-grid">{[
     {id:'m017',label:'바벨을 드는 순간',description:'스쿼트에 프레스까지. 쉬는 틈 없는 한 동작.'},
     {id:'m049',label:'맨몸이면 충분해요',description:'아무 장비 없이도 충분히 숨찰 수 있으니까.'},
@@ -69,6 +69,6 @@ export default function Home(){
  {view==='result'&&champion&&<main className="result"><p className="eyebrow">YOUR WORST WORKOUT OF 2026</p><h1>나의 최악은,<br/><span>{champion.name}.</span></h1><div className="result-grid"><div className="winner-art"><span className="winner-badge">THE WORST #1</span><img src={champion.image} alt={champion.name}/></div><div className="result-info"><p className="eyebrow">THE COMMUNITY SAYS</p><h2>다른 사람들도<br/>같은 생각일까요?</h2><div className="metrics"><div><strong>{championStats?pct(championStats.champions,championStats.appearances):'—'}</strong><span>우승률</span></div><div><strong>{championStats?pct(championStats.wins,championStats.battles):'—'}</strong><span>대결 승률</span></div></div><p className="micro">{championStats?`${championStats.appearances}개 완료 게임에 포함 · ${championStats.champions}회 우승`:'완료 게임 통계를 확인하고 있습니다.'}</p><p className="save-status" role="status">{saved?'✓ 결과가 전체 통계에 반영됐어요.':error?'결과가 아직 저장되지 않았어요. 위에서 다시 시도해주세요.':'결과를 저장하고 있어요…'}</p><button className="primary" onClick={()=>void share(champion.id)}>내 최악 공유하기 <span>↗</span></button><button className="secondary" onClick={()=>{home();setGame(null);persist(null);}}>다시 고르기 ↻</button></div></div><section className="ranking-section"><p className="eyebrow">COMMUNITY RANKING</p><h2>모두가 뽑은 최악</h2>{rankings(5)}<button className="text-link" onClick={()=>setView('stats')}>전체 순위 보기 ↗</button></section></main>}
  {view==='shared'&&shared&&<main className="result shared"><p className="eyebrow">A WORST WORKOUT PICK</p><h1>친구가 고른 최악,<br/><span>{getMovement(shared).name}.</span></h1><img className="shared-img" src={getMovement(shared).image} alt={getMovement(shared).name}/><p className="muted">당신에게도 이 동작이 최악인가요?</p><button className="primary" onClick={home}>나의 최악 고르기 ↗</button></main>}
  {view==='stats'&&<main className="listing"><p className="eyebrow">COMMUNITY RANKING</p><div className="section-heading"><h1>모두의 최악<span>.</span></h1><span>{stats?.total??'—'}개 완료 게임</span></div><p className="muted">최악으로 선택된 동작들의 순위. 여러분의 선택이 쌓입니다.</p>{rankings()}<details className="stats-help"><summary>통계는 어떻게 계산하나요?</summary><p>우승률 = 최종 우승 횟수 ÷ 해당 동작이 포함된 완료 게임 수.<br/>대결 승률 = 선택된 대결 수 ÷ 해당 동작의 전체 대결 수.<br/>끝까지 완료한 게임만 반영하며, 재참여도 별도 게임으로 집계합니다. 사람 수를 세거나 사용자를 식별하지 않습니다. 우승률, 우승 횟수 순으로 정렬하며, 적은 표본과 무작위 대진에 영향을 받는 재미용 통계입니다.</p></details><button className="primary" onClick={home}>나도 골라보기 ↗</button></main>}
- {view==='candidates'&&<main className="listing"><p className="eyebrow">MOVEMENT LIBRARY</p><h1>63개의 동작<span>.</span></h1><p className="muted">익숙한 동작부터 보기만 해도 숨찬 동작까지.</p><label className="search">동작 검색<input value={query} onChange={e=>setQuery(e.target.value)} placeholder="예: 버피, 클린, 덤벨"/></label><div className="catalog">{movements.filter(m=>m.name.includes(query.trim())).map(m=><article key={m.id}><img loading="lazy" src={m.image} alt=""/><small>{m.category}</small><h2>{m.name}</h2></article>)}</div>{!movements.some(m=>m.name.includes(query.trim()))&&<p className="empty">검색 결과가 없습니다.</p>}</main>}
+ {view==='candidates'&&<main className="listing"><p className="eyebrow">MOVEMENT LIBRARY</p><h1>{movements.length}개의 동작<span>.</span></h1><p className="muted">익숙한 동작부터 보기만 해도 숨찬 동작까지.</p><label className="search">동작 검색<input value={query} onChange={e=>setQuery(e.target.value)} placeholder="예: 버피, 클린, 덤벨"/></label><div className="catalog">{movements.filter(m=>m.name.includes(query.trim())).map(m=><article key={m.id}><img loading="lazy" src={m.image} alt=""/><small>{m.category}</small><h2>{m.name}</h2></article>)}</div>{!movements.some(m=>m.name.includes(query.trim()))&&<p className="empty">검색 결과가 없습니다.</p>}</main>}
  {notice&&<div className="toast" role="status">{notice}<button aria-label="닫기" onClick={()=>setNotice('')}>×</button></div>}<footer><span>WORST WORKOUT CLUB © 2026</span><span>취향에는 정답이 없습니다. 최악에도.</span><small>팬이 만든 비공식 프로젝트 · CrossFit과 제휴하지 않습니다.</small></footer></div>
 }

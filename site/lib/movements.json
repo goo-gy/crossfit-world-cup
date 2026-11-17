@@ -376,5 +376,11 @@
     "name": "케틀벨 데드리프트",
     "category": "FUNCTIONAL",
     "image": "/movements/m063.svg"
+  },
+  {
+    "id": "m064",
+    "name": "데빌 프레스",
+    "category": "FUNCTIONAL",
+    "image": "/movements/m064.svg"
   }
 ]

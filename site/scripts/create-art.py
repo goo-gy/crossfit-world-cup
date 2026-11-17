@@ -48,6 +48,8 @@ for m in items:
   y=hand[1];equipment=f'<path d="M52 {y}H247" stroke="#c7ceca" stroke-width="6"/><g stroke="#3ecf8e" stroke-width="13"><path d="M62 {y-22}v44M78 {y-27}v54M222 {y-27}v54M238 {y-22}v44"/></g>'
  if '덤벨' in n:
   x,y=hand;equipment=f'<path d="M{x-16} {y}h32" stroke="#c7ceca" stroke-width="5"/><path d="M{x-17} {y-11}v22M{x+17} {y-11}v22" stroke="#3ecf8e" stroke-width="10"/>'
+ if n=='데빌 프레스':
+  equipment=''.join(f'<path d="M{x-16} {y}h32" stroke="#c7ceca" stroke-width="5"/><path d="M{x-17} {y-11}v22M{x+17} {y-11}v22" stroke="#3ecf8e" stroke-width="10"/>' for x,y in [hand,arm2[-1]])
  if '케틀벨' in n:
   x,y=hand;equipment=f'<circle cx="{x}" cy="{y+18}" r="17" fill="#3ecf8e"/><circle cx="{x}" cy="{y}" r="10" stroke="#3ecf8e" fill="none" stroke-width="5"/>'
  if '볼' in n:
