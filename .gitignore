@@ -1,0 +1,57 @@
+# Local credentials and agent settings
+.aws/
+.agents/
+.codex/
+
+# Secrets and environment-specific configuration
+.env*
+!.env.example
+!.env.*.example
+.dev.vars*
+!.dev.vars.example
+*.pem
+*.key
+
+# Dependencies and package-manager state
+node_modules/
+.pnp
+.pnp.*
+.npm/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Build output and caches
+dist/
+.next/
+.vinext/
+out/
+coverage/
+*.tsbuildinfo
+__pycache__/
+*.py[cod]
+
+# Local Worker state, databases and runtime logs
+.wrangler/
+.sites-runtime/
+*.sqlite
+*.sqlite3
+*.sqlite-*
+*.sqlite3-*
+*.db
+*.db-*
+*.log
+
+# Local work and deployment archives
+/outputs/
+/work/
+/site/outputs/
+/site/work/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Keep source-controlled assets, lockfiles, migrations, and hosting configuration.
+# In particular, do not ignore drizzle/ or .openai/hosting.json.

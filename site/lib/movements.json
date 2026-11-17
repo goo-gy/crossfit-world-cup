@@ -1,0 +1,380 @@
+[
+  {
+    "id": "m001",
+    "name": "에어 스쿼트",
+    "category": "WEIGHTLIFTING",
+    "image": "/movements/m001.svg"
+  },
+  {
+    "id": "m002",
+    "name": "백 스쿼트",
+    "category": "WEIGHTLIFTING",
+    "image": "/movements/m002.svg"
+  },
+  {
+    "id": "m003",
+    "name": "프론트 스쿼트",
+    "category": "WEIGHTLIFTING",
+    "image": "/movements/m003.svg"
+  },
+  {
+    "id": "m004",
+    "name": "오버헤드 스쿼트",
+    "category": "WEIGHTLIFTING",
+    "image": "/movements/m004.svg"
+  },
+  {
+    "id": "m005",
+    "name": "피스톨 / 싱글레그 스쿼트",
+    "category": "BODYWEIGHT",
+    "image": "/movements/m005.svg"
+  },
+  {
+    "id": "m006",
+    "name": "워킹 런지",
+    "category": "WEIGHTLIFTING",
+    "image": "/movements/m006.svg"
+  },
+  {
+    "id": "m007",
+    "name": "바벨 런지",
+    "category": "WEIGHTLIFTING",
+    "image": "/movements/m007.svg"
+  },
+  {
+    "id": "m008",
+    "name": "덤벨 프론트 스쿼트",
+    "category": "FUNCTIONAL",
+    "image": "/movements/m008.svg"
+  },
+  {
+    "id": "m009",
+    "name": "덤벨 오버헤드 스쿼트",
+    "category": "FUNCTIONAL",
+    "image": "/movements/m009.svg"
+  },
+  {
+    "id": "m010",
+    "name": "덤벨 런지",
+    "category": "FUNCTIONAL",
+    "image": "/movements/m010.svg"
+  },
+  {
+    "id": "m011",
+    "name": "덤벨 오버헤드 런지",
+    "category": "FUNCTIONAL",
+    "image": "/movements/m011.svg"
+  },
+  {
+    "id": "m012",
+    "name": "데드리프트",
+    "category": "WEIGHTLIFTING",
+    "image": "/movements/m012.svg"
+  },
+  {
+    "id": "m013",
+    "name": "스모 데드리프트 하이풀",
+    "category": "WEIGHTLIFTING",
+    "image": "/movements/m013.svg"
+  },
+  {
+    "id": "m014",
+    "name": "숄더 프레스",
+    "category": "WEIGHTLIFTING",
+    "image": "/movements/m014.svg"
+  },
+  {
+    "id": "m015",
+    "name": "푸시 프레스",
+    "category": "WEIGHTLIFTING",
+    "image": "/movements/m015.svg"
+  },
+  {
+    "id": "m016",
+    "name": "저크",
+    "category": "WEIGHTLIFTING",
+    "image": "/movements/m016.svg"
+  },
+  {
+    "id": "m017",
+    "name": "스러스터",
+    "category": "WEIGHTLIFTING",
+    "image": "/movements/m017.svg"
+  },
+  {
+    "id": "m018",
+    "name": "클린",
+    "category": "WEIGHTLIFTING",
+    "image": "/movements/m018.svg"
+  },
+  {
+    "id": "m019",
+    "name": "파워 클린",
+    "category": "WEIGHTLIFTING",
+    "image": "/movements/m019.svg"
+  },
+  {
+    "id": "m020",
+    "name": "행 파워 클린",
+    "category": "WEIGHTLIFTING",
+    "image": "/movements/m020.svg"
+  },
+  {
+    "id": "m021",
+    "name": "클린 앤 저크",
+    "category": "WEIGHTLIFTING",
+    "image": "/movements/m021.svg"
+  },
+  {
+    "id": "m022",
+    "name": "스내치",
+    "category": "WEIGHTLIFTING",
+    "image": "/movements/m022.svg"
+  },
+  {
+    "id": "m023",
+    "name": "파워 스내치",
+    "category": "WEIGHTLIFTING",
+    "image": "/movements/m023.svg"
+  },
+  {
+    "id": "m024",
+    "name": "행 파워 스내치",
+    "category": "WEIGHTLIFTING",
+    "image": "/movements/m024.svg"
+  },
+  {
+    "id": "m025",
+    "name": "덤벨 데드리프트",
+    "category": "FUNCTIONAL",
+    "image": "/movements/m025.svg"
+  },
+  {
+    "id": "m026",
+    "name": "덤벨 클린",
+    "category": "FUNCTIONAL",
+    "image": "/movements/m026.svg"
+  },
+  {
+    "id": "m027",
+    "name": "덤벨 파워 클린",
+    "category": "FUNCTIONAL",
+    "image": "/movements/m027.svg"
+  },
+  {
+    "id": "m028",
+    "name": "덤벨 행 파워 클린",
+    "category": "FUNCTIONAL",
+    "image": "/movements/m028.svg"
+  },
+  {
+    "id": "m029",
+    "name": "덤벨 스내치",
+    "category": "FUNCTIONAL",
+    "image": "/movements/m029.svg"
+  },
+  {
+    "id": "m030",
+    "name": "덤벨 푸시 프레스",
+    "category": "FUNCTIONAL",
+    "image": "/movements/m030.svg"
+  },
+  {
+    "id": "m031",
+    "name": "덤벨 저크",
+    "category": "FUNCTIONAL",
+    "image": "/movements/m031.svg"
+  },
+  {
+    "id": "m032",
+    "name": "덤벨 스러스터",
+    "category": "FUNCTIONAL",
+    "image": "/movements/m032.svg"
+  },
+  {
+    "id": "m033",
+    "name": "덤벨 파머스 캐리",
+    "category": "FUNCTIONAL",
+    "image": "/movements/m033.svg"
+  },
+  {
+    "id": "m034",
+    "name": "케틀벨 스윙",
+    "category": "FUNCTIONAL",
+    "image": "/movements/m034.svg"
+  },
+  {
+    "id": "m035",
+    "name": "케틀벨 스내치",
+    "category": "FUNCTIONAL",
+    "image": "/movements/m035.svg"
+  },
+  {
+    "id": "m036",
+    "name": "메디신볼 클린",
+    "category": "FUNCTIONAL",
+    "image": "/movements/m036.svg"
+  },
+  {
+    "id": "m037",
+    "name": "월볼 샷",
+    "category": "FUNCTIONAL",
+    "image": "/movements/m037.svg"
+  },
+  {
+    "id": "m038",
+    "name": "풀업",
+    "category": "BODYWEIGHT",
+    "image": "/movements/m038.svg"
+  },
+  {
+    "id": "m039",
+    "name": "체스트투바 풀업",
+    "category": "BODYWEIGHT",
+    "image": "/movements/m039.svg"
+  },
+  {
+    "id": "m040",
+    "name": "바 머슬업",
+    "category": "BODYWEIGHT",
+    "image": "/movements/m040.svg"
+  },
+  {
+    "id": "m041",
+    "name": "링 머슬업",
+    "category": "BODYWEIGHT",
+    "image": "/movements/m041.svg"
+  },
+  {
+    "id": "m042",
+    "name": "푸시업",
+    "category": "BODYWEIGHT",
+    "image": "/movements/m042.svg"
+  },
+  {
+    "id": "m043",
+    "name": "핸드스탠드 푸시업",
+    "category": "BODYWEIGHT",
+    "image": "/movements/m043.svg"
+  },
+  {
+    "id": "m044",
+    "name": "핸드스탠드 워크",
+    "category": "BODYWEIGHT",
+    "image": "/movements/m044.svg"
+  },
+  {
+    "id": "m045",
+    "name": "월워크",
+    "category": "BODYWEIGHT",
+    "image": "/movements/m045.svg"
+  },
+  {
+    "id": "m046",
+    "name": "AB매트 싯업",
+    "category": "BODYWEIGHT",
+    "image": "/movements/m046.svg"
+  },
+  {
+    "id": "m047",
+    "name": "GHD 싯업",
+    "category": "BODYWEIGHT",
+    "image": "/movements/m047.svg"
+  },
+  {
+    "id": "m048",
+    "name": "토즈투바",
+    "category": "BODYWEIGHT",
+    "image": "/movements/m048.svg"
+  },
+  {
+    "id": "m049",
+    "name": "버피",
+    "category": "BODYWEIGHT",
+    "image": "/movements/m049.svg"
+  },
+  {
+    "id": "m050",
+    "name": "버피 박스 점프오버",
+    "category": "FUNCTIONAL",
+    "image": "/movements/m050.svg"
+  },
+  {
+    "id": "m051",
+    "name": "박스 점프",
+    "category": "FUNCTIONAL",
+    "image": "/movements/m051.svg"
+  },
+  {
+    "id": "m052",
+    "name": "박스 스텝업",
+    "category": "FUNCTIONAL",
+    "image": "/movements/m052.svg"
+  },
+  {
+    "id": "m053",
+    "name": "싱글언더",
+    "category": "ENGINE",
+    "image": "/movements/m053.svg"
+  },
+  {
+    "id": "m054",
+    "name": "더블언더",
+    "category": "ENGINE",
+    "image": "/movements/m054.svg"
+  },
+  {
+    "id": "m055",
+    "name": "로잉",
+    "category": "ENGINE",
+    "image": "/movements/m055.svg"
+  },
+  {
+    "id": "m056",
+    "name": "할로우 록",
+    "category": "BODYWEIGHT",
+    "image": "/movements/m056.svg"
+  },
+  {
+    "id": "m057",
+    "name": "버피 풀업",
+    "category": "BODYWEIGHT",
+    "image": "/movements/m057.svg"
+  },
+  {
+    "id": "m058",
+    "name": "셔틀런",
+    "category": "ENGINE",
+    "image": "/movements/m058.svg"
+  },
+  {
+    "id": "m059",
+    "name": "러닝",
+    "category": "ENGINE",
+    "image": "/movements/m059.svg"
+  },
+  {
+    "id": "m060",
+    "name": "바이크",
+    "category": "ENGINE",
+    "image": "/movements/m060.svg"
+  },
+  {
+    "id": "m061",
+    "name": "스키에르그",
+    "category": "ENGINE",
+    "image": "/movements/m061.svg"
+  },
+  {
+    "id": "m062",
+    "name": "바 페이싱 버피",
+    "category": "BODYWEIGHT",
+    "image": "/movements/m062.svg"
+  },
+  {
+    "id": "m063",
+    "name": "케틀벨 데드리프트",
+    "category": "FUNCTIONAL",
+    "image": "/movements/m063.svg"
+  }
+]
