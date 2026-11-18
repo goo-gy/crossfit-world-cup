@@ -107,6 +107,10 @@
 - [x] 바 페이싱 버피 — [공식 WOD 목록](https://www.crossfit.com/search/burpees)
 - [x] 케틀벨 데드리프트 — [공식 Games 역사](https://games.crossfit.com/history-of-the-games)
 
+## 사용자 요청으로 추가한 후보
+
+- [x] 데빌 프레스 — 2026-11-18 사용자 요청으로 추가. 덤벨 2개를 사용하는 동작이며 서비스 분류는 FUNCTIONAL.
+
 ## 개별 후보로 넣지 않은 라이브러리 안내 항목
 
 - Handstand Push-up Variations: 이미 세부 핸드스탠드 푸시업 후보로 분리.

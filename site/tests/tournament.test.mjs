@@ -4,8 +4,8 @@ import {readFileSync,existsSync} from 'node:fs';
 import {draw,replay} from '../lib/tournament.ts';
 const movements=JSON.parse(readFileSync(new URL('../lib/movements.json',import.meta.url)));
 const ids=movements.map(m=>m.id);
-test('approved 63 movements and artwork are complete',()=>{
- assert.equal(movements.length,63);assert.equal(new Set(ids).size,63);
+test('approved 64 movements and artwork are complete',()=>{
+ assert.equal(movements.length,64);assert.equal(new Set(ids).size,64);
  const doc=readFileSync(new URL('../../docs/MOVEMENT-CANDIDATES.md',import.meta.url),'utf8');
  const expected=doc.split('\n').filter(l=>l.startsWith('- [x] ')).map(l=>l.slice(6).split(' — ')[0].split(' (')[0]);
  assert.deepEqual(movements.map(m=>m.name),expected);

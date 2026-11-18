@@ -1,5 +1,5 @@
 export type Game = { id: string; pool: string[]; choices: string[] };
-export const SET_VERSION = '2026-v1-63';
+export const SET_VERSION = '2026-v2-64';
 export function draw(ids: string[], size: number, random = Math.random) {
   if (![16,32].includes(size) || ids.length < size) throw new Error('지원하지 않는 라운드입니다.');
   const pool = [...ids];
