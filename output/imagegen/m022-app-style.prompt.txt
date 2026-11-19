@@ -1,0 +1,20 @@
+Use case: scientific-educational.
+Asset type: ONE sample exercise-card illustration for a professional CrossFit movement comparison application.
+
+Primary request: create an original, polished 2D instructional illustration of ONE adult athlete in ONE representative BARBELL SQUAT SNATCH receiving pose. One continuous square composition, one athlete, one frozen pose.
+
+Input images — STYLE REFERENCES ONLY, not edit targets and not pose references:
+1. sample1.png: borrow the warm approachable skin palette, restrained hand-drawn contour quality and balanced editorial simplicity. Do not copy the two-person layout, VS text, paper background or facial identity.
+2. sample2.jpeg: borrow the economical continuous outlines, simplified facial features, large clean color shapes and excellent readability at small size. Avoid excessive abstraction: keep functional anatomy and equipment precise. Do not copy its back-squat pose or blue palette.
+3. sample3.webp: borrow the clear three-quarter/side presentation, useful body-volume shading and readable hip/knee relationships. Reduce its muscular detailing and shading complexity. Do not copy its back-squat pose.
+
+Art direction: combine these into a coherent contemporary fitness-app illustration. Natural athletic adult proportions, normal head size, understated short dark hair, simplified neutral focused face with small simple eyes and a few facial lines. Clear, medium-weight charcoal contours with a slightly human drawn quality. Broad flat color areas with at most two or three restrained cel-shading values, a touch of warm editorial softness. Skin and clothes should visibly look DRAWN. No realistic portrait detail, individual hair strands, veins, muscle striations, tendons, pores, fabric rendering, glossy reflections or realistic 3D volume. No caricature exaggeration, oversized head, comic expression, chibi, mascot or stock photography appearance. Trustworthy and calm exercise-instruction artwork, clean and approachable rather than dramatic.
+
+Exact exercise mechanics, highest priority: show the athlete catching a SNATCH in a FULL DEEP OVERHEAD SQUAT. View from a front-side three-quarter angle so both arms and feet are visible and squat depth can be read. Hip crease BELOW top of knees, heels completely FLAT on the ground, feet approximately shoulder width with toes slightly out, knees following toes, neutral spine, chest upright. BOTH ELBOWS FULLY STRAIGHT and locked, both hands in a VERY WIDE overhand SNATCH grip toward the barbell sleeves. The barbell is horizontally OVERHEAD, never across the shoulders or behind the neck. Wrists directly support the bar. Bar vertically balanced over the middle of the feet. A straight rigid Olympic shaft with one clearly attached matte bumper plate on each end; entire equipment visible. Keep exactly two anatomically plausible arms, two legs, hands actually wrapping around the shaft, and clearly separated shoes.
+
+App palette and clothing: fitted light cool-grey short-sleeve athletic shirt, muted emerald-green shorts, neutral charcoal/grey training shoes. Natural warm skin tones inspired by reference 1. Matte dark charcoal bumper plates with subtle emerald accents and a simple light-grey bar. Restrained charcoal/emerald brand palette; legible pale shirt and warm skin against the dark background.
+
+Background and framing: uniform deep charcoal #151917, no beige paper, no gym scenery, no platform, only a small subtle grounding shadow. Center full body AND entire barbell within the central 80 percent of a square canvas, generous clear margins on all four sides. Show complete feet, both hands and both bar ends without cropping. Clear strong silhouette, useful at 170–300 px in app cards.
+
+Text: none. No labels, captions, numbers, logos, watermark, arrows, decorative badges, border, split panels, steps, motion trails, inset, extra people or duplicated limbs.
+The intended result is a single professional, clearly illustrated snatch technique sample that combines the three references while fitting our dark CrossFit app.

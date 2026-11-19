@@ -1,0 +1,15 @@
+{
+  "count": 64,
+  "dimensions": "1024x1024",
+  "format": "webp",
+  "decoded": 64,
+  "pngBytes": 93801722,
+  "webpBytes": 2711038,
+  "preservedMovementData": true,
+  "corrected": [
+    "m015",
+    "m017",
+    "m030",
+    "m032"
+  ]
+}
