@@ -1,0 +1,13 @@
+{
+  "id": "m022",
+  "source": "approved-snatch-sample",
+  "image": "site/public/movements/m022-v6.webp",
+  "original": "output/imagegen/approved-originals/m022-v6.png",
+  "mode": "built-in",
+  "reference_images": [
+    "output/imagegen/style-references/sample1.png",
+    "output/imagegen/style-references/sample2.jpeg",
+    "output/imagegen/style-references/sample3.webp"
+  ],
+  "corrected": false
+}

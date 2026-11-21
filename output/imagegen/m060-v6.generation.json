@@ -1,0 +1,12 @@
+{
+  "id": "m060",
+  "source": "/home/gook/.codex/generated_images/01a1f4b8-3dde-7731-b229-9661d8fc14c6/exec-b7237df4-ca7f-4d67-ac6e-3a0f725bea26.png",
+  "image": "site/public/movements/m060-v6.webp",
+  "mode": "built-in",
+  "reference": "site/public/movements/m022-v6.png",
+  "original": "output/imagegen/approved-originals/m060-v6.png",
+  "reference_images": [
+    "site/public/movements/m022-v6.png"
+  ],
+  "corrected": false
+}
