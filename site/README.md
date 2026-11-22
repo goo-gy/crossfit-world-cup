@@ -63,6 +63,21 @@ docker compose cp web:/app/site/drizzle ./site/
 
 Docker 구성의 정적 검사와 Compose 설정 검증은 통과했습니다. 현재 에이전트 환경에서는 `/var/run/docker.sock` 접근이 거부되어 실제 이미지 빌드·컨테이너 실행·HTTP 응답 검증은 미완료입니다. Docker daemon에 접근 가능한 호스트에서 위 실행 명령으로 확인해야 합니다. Docker 빌드 환경에서 npm 레지스트리 연결이 가능해야 합니다.
 
+## Caddy로 HTTPS 배포
+
+구매한 도메인의 `A` 레코드를 서버의 공인 IPv4 주소로 설정하고, 방화벽과 클라우드 보안 그룹에서 TCP `80`과 `443`을 허용합니다. `AAAA` 레코드를 사용한다면 서버의 공인 IPv6 주소로 설정합니다. Cloudflare DNS를 사용한다면 이 구성에서는 `DNS only`를 선택합니다. [Caddy HTTPS 설정](https://caddyserver.com/docs/quick-starts/https)
+
+서버의 프로젝트 루트 `.env`에 `SITE_DOMAIN=example.com`을 추가합니다. `example.com`을 실제 도메인으로 바꾸고 호스트 이름만 입력합니다. 프로젝트 루트에서 다음 명령을 실행합니다.
+
+```bash
+docker compose -f compose.yaml -f compose.https.yaml up --build -d
+docker compose -f compose.yaml -f compose.https.yaml ps
+curl -I http://example.com
+curl -fsS https://example.com/api/stats
+```
+
+Caddy는 앱이 정상 상태가 된 뒤 실행되어 인증서를 발급하고 갱신합니다. HTTP 요청은 HTTPS로 리디렉션됩니다. 발급 상태는 `docker compose -f compose.yaml -f compose.https.yaml logs caddy`에서 확인할 수 있습니다. 인증서와 게임 결과는 각각 `caddy-data`와 `workout-data` 볼륨에 저장됩니다. 배포를 내릴 때는 같은 `-f` 옵션으로 `down`을 실행하고 볼륨을 보존합니다.
+
 ## 실행 (Node.js 24 이상 권장)
 
 네트워크가 가능한 환경에서 이 디렉터리를 기준으로 실행합니다.
